@@ -1,5 +1,3 @@
-
-
 //SELECCION DE BANDERAS
 
 var banderas = [
@@ -11,34 +9,33 @@ var banderas = [
 
   {
     nombre: "Argentina",
-    area: "+569",
+    area: "+54",
     bandera:"img/argentina.png"
   },
 
   {
     nombre: "Brasil",
-    area: "+569",
+    area: "+55",
     bandera:"img/brasil.png"
   },
 
   {
     nombre: "España",
-    area: "+569",
+    area: "+34",
     bandera:"img/españa.png"
   },
 
   {
     nombre: "Mexico",
-    area: "+569",
+    area: "+52",
     bandera:"img/mexico.png"
   },
 
   {
     nombre: "Peru",
-    area: "+569",
+    area: "+51",
     bandera:"img/peru.png"
-  },
-
+  }
 ];
 
 
@@ -54,3 +51,18 @@ for (var i=0 ; i<banderas.length ; ++i){
 
 $('#foto img').attr('src', bandera_pais.bandera);
 $('#area').html(bandera_pais.area);
+
+//validar input
+$('.next a').on('click', function(){
+  var input = $('#teclado').val();
+  if (input.length == 0){
+    alert("ingrese numero");
+  }else if(isNaN(input)){
+    alert('solo numeros');
+  }else if(input.length!==9){
+    alert('debe tener 9 digitos');
+  }else{
+
+  }
+});
+
