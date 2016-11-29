@@ -55,7 +55,7 @@ $('#area').html(bandera_pais.area);
 //validar input
 $('.next a').on('click', function(){
   var input = $('#teclado').val();
-  if (input.length == 0){
+  if (input.length == 0 || input.length == ""){
     alert("ingrese numero");
   }else if(isNaN(input)){
     alert('solo numeros');

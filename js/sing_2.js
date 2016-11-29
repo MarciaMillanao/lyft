@@ -4,7 +4,7 @@ $('.next_2 a').on('click', function(ev){
   var nombre = $('#usr').val();
   var soloLetras = /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
 
-  if (nombre.length == 0) {
+  if (nombre.length == 0 || nombre.length == "") {
     // alertar al usuario
     alert('ingrese datos');
     return false;
@@ -16,13 +16,14 @@ $('.next_2 a').on('click', function(ev){
     alert('solo letras')
 });
 
+
 //validar correo
 $('.next_2 a').on('click', function(ev){
 
   var correo = $('#email').val();
   var emailValido = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
-  if (correo.length == 0) {
+  if (correo.length == 0 || correo.length == "") {
     // alertar al usuario
     alert('ingrese datos');
     return false;
