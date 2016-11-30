@@ -1,6 +1,7 @@
 
 body{
 	margin : 0 auto;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 #body {
@@ -20,9 +21,13 @@ body{
 }
 
 .primeros{
-		background: #2B938D;
-		width: 70%;
-		margin-left: 10%;
+	background: #2B938D;
+	width: 70%;
+	margin-left: 10%;
+}
+
+.form-group{
+	margin-bottom: 2%;
 }
 
 p{
@@ -35,19 +40,32 @@ hr{
 	height: 1px;
 }
 
+.well_next{
+	margin-top: 3%;
+}
+
 .next{
 	background:#2C948E;
 	color: #fff;
 	margin-top: 5%;
 	padding: 2%;
-	}
+}
+
+.next a{
+	text-decoration: none;
+	color:#fff;
+}
 
 .next_2{
 	background:#2C948E;
 	color: #fff;
-	margin-top: 5%;
 	padding: 2%;
-	}
+}
+
+.next_2 a{
+	text-decoration: none;
+	color:#fff;
+}
 
 .checkbok {
 	padding: 0%;

@@ -1,4 +1,3 @@
-//validar nombre
 $('.next_2 a').on('click', function(ev){
 
   var nombre = $('#usr').val();
@@ -6,33 +5,43 @@ $('.next_2 a').on('click', function(ev){
 
   if (nombre.length == 0 || nombre.length == "") {
     // alertar al usuario
-    alert('ingrese datos');
+    alert('Ingrese su Nombre y Apellido');
+    return false;
+
+  } else if (nombre.length > 30){
+    alert('maximo 30 caracteres');
+    return false;
+
+  } else if(!soloLetras.test(nombre)){
+    alert('Ingrese solo letras')
     return false;
   }
-  if (nombre.length > 30){
-  alert('maximo 30 caracteres');
-  }
-  if(!soloLetras.test(nombre))
-    alert('solo letras')
-});
-
-
-//validar correo
-$('.next_2 a').on('click', function(ev){
-
+  
   var correo = $('#email').val();
-  var emailValido = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+  var emailValido = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
 
   if (correo.length == 0 || correo.length == "") {
     // alertar al usuario
-    alert('ingrese datos');
+    alert('Ingrese su email');
+    return false;
+
+  } else if (correo.length > 50){
+    alert('maximo 50 caracteres');
+    return false;
+
+  } else if(!emailValido.test(correo)){
+    alert('Email invalido');
     return false;
   }
-   if (correo.length > 50){
-  alert('maximo 50 caracteres');
-  }
-  if(!emailValido.test(email)){
-    alert('correo invalido')
-  }
 
+  // en este punto guardar datos
+  localStorage.setItem("nombre_nuevo", nombre);
+  localStorage.setItem("email", correo);
 });
+
+
+
+
+
+
+

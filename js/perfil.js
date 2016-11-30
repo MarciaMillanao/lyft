@@ -4,4 +4,6 @@ $('.menu-bar').on('click', function(){
 
 var nombre = localStorage.getItem("nombre_nuevo");
 $('.usuario').html(nombre);
-      
+
+var correo = localStorage.getItem("email");
+$('.email').html(correo);

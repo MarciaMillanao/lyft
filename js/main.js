@@ -53,16 +53,21 @@ $('#foto img').attr('src', bandera_pais.bandera);
 $('#area').html(bandera_pais.area);
 
 //validar input
-$('.next a').on('click', function(){
+$('.next').on('click', function(){
   var input = $('#teclado').val();
-  if (input.length == 0 || input.length == ""){
-    alert("ingrese numero");
+  if (input.length == 0 || input.length ==""){
+    alert("ingrese su numero");
+    return false;
+
   }else if(isNaN(input)){
-    alert('solo numeros');
+    alert('ingrese solo numeros');
+    return false;
+
   }else if(input.length!==9){
     alert('debe tener 9 digitos');
-  }else{
-
+    return false;    
   }
+  
+  localStorage.setItem("numero_telefono", input);
 });
 
